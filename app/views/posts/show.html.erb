@@ -1,0 +1,27 @@
+ <div class="main">
+  <div class="maindata">
+    <div class="profile">
+      <div class="userdata">
+        <%= render 'profiles/data' %>
+      </div>
+      <div class="status">
+        <%= render 'shared/status' %>
+      </div>
+    </div>
+    <div class = "post">
+      <p id="notice"><%= notice %></p>
+      <div class="limit">
+        <b>Blog:</b>
+        <%= @post.blog %>
+      </div>
+      <div class="extra"></div>
+      <%= render 'shared/comment', :comments => @comments %>
+      <%= render 'shared/commentform' %>
+      <br>
+      <strong><u><%= link_to 'Back To Tweets', home_detail_path %></u></strong>
+    </div>  
+  </div>    
+</div>  
+
+
+  

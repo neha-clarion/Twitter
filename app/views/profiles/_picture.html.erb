@@ -1,0 +1,9 @@
+<%= form_for @profile, :html => { :multipart => true } do |f| %>
+  <div class = "profilepicture">
+    <%= f.label  :Change_Profile_Picture %><br />
+    <%= f.file_field :photo %>
+    <div>
+        <%= f.submit "Update" %>
+    </div>
+  </div>
+<% end %>  

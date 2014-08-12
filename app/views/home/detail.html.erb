@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="maindata">
+    <div class="profile">
+
+      <div class="userdata">
+        <%= render 'profiles/data' %>
+      
+        <div class = "profilepicture">
+          <%= render :partial => 'profiles/picture', :locals => { :f => @profile } %>
+        </div>
+      </div><br>
+
+      <div class="status">
+        <%= render 'shared/status' %>
+      </div>
+      
+      <div class = "newpost">
+        <%= render 'posts/form' %>
+      </div>
+
+    </div>
+    <%= render 'data' %>
+  </div>  
+</div>  
+
+
+  
+

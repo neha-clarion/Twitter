@@ -1,0 +1,29 @@
+<div class="signup"> 
+<div class="image">
+  <%= image_tag("index.jpeg", size: "600x200", alt: "Delete Entry") %>
+  <div class="imagebox"><center>
+    <h3>Follow your Interest</h3></center>
+  </div>
+  <div class="imagedata">
+    Instant Updates From Your Friends, Celebrities, And What Happening Around The World.
+  </div>
+</div>
+<div class="action">
+  <h2>Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :id => "form"}) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, :required => :true, :email => git commit -m'Initial commit':true %></div>
+
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off", :required => :true, :minlength => 8 %></div>
+
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", :required => :true, :minlength => 8 %></div>
+
+      <div><%= f.submit "Sign up"  %></div>
+    <% end %>
+  <div class ="link"><%= render "devise/shared/links" %></div>
+</div>
+</div>

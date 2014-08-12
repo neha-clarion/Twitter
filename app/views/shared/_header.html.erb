@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="mainheader">
+    <%if current_user%><b>
+      <div class = "codrops-demos">
+        <div class="direction">
+        <%= link_to "Home" ,home_detail_path, {:style=>'color:#FFFFFF;', :class => 'btn'} %>|
+        <%= link_to "Edit Profile", edit_profile_path(current_user.profile.id), {:style=>'color:#FFFFFF;', :class => 'btn'} %>|
+        <%= link_to "Post", new_post_path, {:style=>'color:#FFFFFF;', :class => 'btn'} %>|
+        <%= link_to "Users List", profiles_path, {:style=>'color:#FFFFFF;', :class => 'btn'} %>
+        </div>
+        <div class="direction1">
+          <%= link_to "Account Setting", edit_user_registration_path(current_user.profile.id), {:style=>'color:#FFFFFF;', :class => 'btn'} %>|
+          <%= link_to "Log Out",destroy_user_session_path ,:method =>:delete, :style=>'color:#FFFFFF;', :class => 'btn'  %>
+        </div>
+      </div>
+    <% end %></b>
+  </div>  
+</nav>

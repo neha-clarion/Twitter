@@ -1,0 +1,19 @@
+  <% comments.each do |comment| %>
+    <div class="tweet"  >
+      <%#= comment.user.profile.name if comment.user_id.present? %>
+      <div class ="profilepicture1">
+        <div class="imagedata">
+          <%= link_to comment.user.profile.photo.present? ? image_tag(comment.user.profile.photo, size: "30x23", alt: "reply") : image_tag("small/missing.jpeg", size: "30x23", alt: "reply") %>
+        </div>
+      </div>
+
+      <div class ="postcontent">
+        <strong><%= link_to comment.user.profile.name.present? ? comment.user.profile.name : comment.user.email, profile_path(comment.user.id) %>:</strong>
+        <%#= comment.user.profile.name.present? ? comment.user.profile.name : comment.user.email %>
+        <%= simple_format comment.content %>
+      </div>
+
+    </div>  
+  <% end %>
+<%= will_paginate comments %>
+

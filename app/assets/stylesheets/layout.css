@@ -1,0 +1,411 @@
+.header
+{
+  float: right;
+}
+
+.welcome
+{
+  font-size:30px;
+  font-weight: bold;
+  float:center;
+  margin-left: 500px;
+}
+
+.welcomeimage
+{ 
+  margin-left: 365px;
+  margin-top: 40px;
+}
+
+.signup
+{
+  height:500px;
+  width: 1200px;
+  background-color: #19A3FF;
+  margin-left: 80px;
+}
+
+.action
+{
+  padding-top: 80px;
+  height: 500px;
+  width: 500px;
+  background-color: #19A3FF;
+  margin-left: 200px;
+}
+
+.image
+{
+  height: 500px;
+  width: 600px;
+  float: right;
+  background-color: #19A3FF;
+  padding-right: 100px;
+  padding-top: 80px;
+}
+
+.imagebox
+{
+  height: 50px;
+  width: 500px;
+  background-color: #19A3FF;
+  text-align: center;
+}
+
+.imagedata
+{
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.link
+{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.mainheader
+{ 
+  display: block;
+  height: 50px;
+  width: 100%;
+  font-size: 15 px;
+  color: white;
+}
+
+.codrops-demos 
+{
+  display: block;
+  line-height: 30px;
+  padding: 5px 0px;
+  width:1500px;
+  height:77px;
+  color: white;
+}
+
+.profile
+{
+  float:left;
+  width: 40%;
+  height: 800px;
+  padding-left: 80px;
+  background-color: #19A3FA;
+}
+
+.post
+{ 
+  float:right;
+  width: 60%;
+  background-color: #19A3FA;
+  height: 800px;
+  padding-right: 50px;
+}
+
+.newpost
+{
+  float:left;
+}
+
+.userdata
+{
+  background-color: white;
+  height: auto !important;
+  position: relative; 
+  width: 275px;
+}
+
+.status
+{
+  background-color: white;
+  height: auto !important;
+  position: relative; 
+  width: 275px;
+}
+
+.main
+{
+  height: 1000px;
+  width: 100%;
+  background-color: black;
+}
+
+.maindata
+{
+  margin-left: 170px;
+  margin-right: 200px;  
+  padding-top: 100px;
+  height: 1000px;
+  width: 1000px;
+  background-color: #19A3FA;
+}
+
+.tabledata
+{
+  border-style: groove 1px black;
+  height: 25px;
+  width: 250px;
+}
+
+.tweet
+{ 
+  width: 550px;
+  background-color:white;
+  font-size: 14px;
+  height: auto !important;
+  position: relative;
+  clear: both;
+}
+
+.profilepicture1
+{
+  width: 80px;
+  float: left;
+  min-height: 23px;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.imagedata1
+{
+  width: 30px;
+  height: auto !important;
+}
+
+.postcontent
+{ 
+  word-wrap:break-word;   
+  width: 360px;
+  float: left;
+  background-color: white;
+  min-height: 23px;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.postaction
+{ margin-left: 5px;
+  width: 90px;
+  float: left;
+  min-height: 23px;
+  height: auto !important; 
+  margin-bottom: 10px;
+}
+
+.commentdata
+{
+  word-wrap:break-word;
+  width: 550px;
+  height: 70px;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.commentphoto
+{
+  width: 80px;
+  float: left;
+  min-height: 23px;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.commentname
+{
+  word-wrap:break-word;   
+  width: 360px;
+  float: left;
+  background-color: white;
+  min-height: 23px;
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.commentname1
+{ margin-left: 80px;
+  margin-bottom: -5px;
+  margin-top: -8px;
+}
+
+.commentaction
+{
+  width: 90px;
+  float: left;
+  min-height: 23px;
+  height: auto !important; 
+  margin-bottom: 10px;
+}
+
+.limit
+{
+  background-color: white;
+  word-wrap:break-word;
+  width: 512px;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.editdata
+{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.profiledata
+{
+ height: 60px;
+ width: 500px;
+}
+
+.profiledata1
+{
+ height: 40px;
+ width: 500px;
+}
+
+.profiledata2
+{
+ height: 30px;
+ width: 500px;
+ font-size: 15px; 
+}
+
+.userlist
+{
+  height: 20px;
+  font-size: 20px;
+  border-spacing: 10px;
+}
+
+.userdata1
+{
+  height: 15px;
+  font-size: 15px;
+  font-family: vardana;
+  width: 100px;
+}
+
+.formatext
+{
+  font-size: 25px;
+}
+
+table
+{
+  text-align: center;
+  height: 100px;
+  width: 200px; 
+}
+
+.paginatedata
+{
+  font-size: 15px;
+}
+
+
+.floatdata  
+{
+  float:right;
+}
+
+.linkdata:link
+{ 
+  color: #333333;
+}
+
+.linkdata:visited
+{
+ color: #FFFFFF; 
+}
+
+.linkdata:hover
+{
+ color: #CCCCCC;
+}
+
+.linkdata:active
+{
+ color: #333333;
+}
+
+.profilepicture
+{
+  margin-left: 2px;
+}
+.extra
+{
+  clear: both;
+}
+.extra1
+{
+  clear: both;
+}
+
+td 
+{
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+form label.error 
+{
+color:red;
+}
+
+form input.error 
+{
+border:1px solid red;
+}
+
+.labledata
+{
+height: auto !important;
+height: 100%;
+width: 300px;
+margin-bottom: 5px;
+}
+
+.deletedata
+{
+  float: right;
+}
+
+
+#form label.error 
+{
+color:red;
+}
+
+#form input.error 
+{
+border:1px solid red;
+}
+
+.direction
+{
+  float:left;
+  display: block;
+  height: 50px;
+  width: 60%;
+  font-size: 15 px;
+  color: white;
+  position: relative;
+
+}
+
+.direction1
+{
+  float: right;
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 25%;
+  font-size: 15 px;
+  color: white;
+}

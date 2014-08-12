@@ -1,0 +1,75 @@
+<div class="main">
+  <div class="maindata">
+    <div class="profile">
+      <div class="userdata">
+        <%= render 'profiles/data' %>
+      </div>
+      <div class="userdata">
+        <%= render 'shared/status' %>
+      </div>
+    </div>
+    
+    <div class = "post">
+      <% if params[:action] == 'followers'%>
+        <div class = "formatext">Followers:</div><br/>
+        <% @user.followers.each do |user| %>
+          <table class="tabledata">
+            <tr>
+             
+              <td>
+                <div class="imagedata">
+                  <%= link_to user.profile.photo.present? ? image_tag(user.profile.photo, size: "50x50", alt: "reply") : image_tag("small/missing.jpeg", size: "50x50", alt: "reply") %>
+                </div>
+              </td>
+
+              <td>
+                <div class = "userdata1">
+                  <%= user.profile.name %>
+                </div>
+              </td>
+
+              <td>
+                <div>
+                  <%= link_to "View Profile", profile_path(user.id) %>
+                </div>
+              </td>
+              
+            </tr>
+          </table>
+        <% end %>
+
+
+        <%else%>
+        <div class = "formatext">Followed User:</div><br/>
+          <% @user.followed_users.each do |user| %>
+          <table class="tabledata"> 
+            <tr>
+
+              <td>  
+                <div class="imagedata">
+                  <%= link_to user.profile.photo.present? ? image_tag(user.profile.photo, size: "50x50", alt: "reply") : image_tag("small/missing.jpeg", size: "50x50", alt: "reply") %>
+                </div>
+              </td>
+
+              <td>
+                <div class ="userdata1">
+                  <%= user.profile.name %>
+                </div>
+              </td>
+
+              <td>
+                <div> 
+                  <%= link_to "View Profile", profile_path(user.id) %>
+                </div>  
+              </td>
+              
+            </tr>
+          </table>
+          <% end %>
+        <%end%>
+      </div>  
+    </div>    
+  </div> 
+<%= will_paginate @users %>
+
+

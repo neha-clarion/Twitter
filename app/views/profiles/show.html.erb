@@ -1,0 +1,64 @@
+<div class="main">
+  <div class="maindata">
+    <div class="profile">
+      <div class="userdata">
+        <%= render 'profiles/data' %>
+      </div>
+      <div class="status">
+        <%= render 'shared/status' %>
+      </div>
+    </div>  
+    <div class="post"> 
+      <div>
+        <h2><u>User profile</u></h2>
+        <%= render 'data' %> 
+        
+        <p class="profiledata2">
+          <strong>Country:</strong>
+          <%= @profile.country %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Website:</strong>
+          <%= @profile.website %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Bio:</strong>
+          <%= @profile.bio %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Mobile Number:</strong>
+          <%= @profile.mobile_number %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Carrier:</strong>
+          <%= @profile.carrier %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Profile Name:</strong>  
+          <%= @profile.profile_name %>
+        </p>
+
+        <p class="profiledata2">
+          <strong>Email:</strong>
+          <%#= @profile.user.email %>
+        </p>
+      </div>
+
+      <div>
+        <%= render 'shared/status' %>
+      </div>
+
+      <div>
+        <% if @user != current_user %>
+          <%= render 'shared/follow_form' %>
+        <% end %><br />
+        <strong><u><%= link_to 'Edit Profile',edit_profile_path %></u></strong> 
+      </div>
+    </div> 
+
+</div>    

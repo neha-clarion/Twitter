@@ -1,0 +1,66 @@
+  <%= form_for @profile, :html => { :multipart => true }, :html => { :id => "form"} do |f| %>
+    <% if @profile.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:
+        </h2>
+        <ul>
+          <% @profile.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="container">    
+    <div class="labledata">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, :required => :true, :maxlength => 20, :size => 30 %>
+    </div><br>
+    
+    <div class="labledata">
+      <%= f.label :location %><br />
+      <%= f.text_field :location, :required => :true,:maxlength => 30, :size => 30  %>
+    </div><br>
+    
+    <div class="labledata">
+      <%= f.label :Choose_Profile_Picture %><br />
+      <%= f.file_field :photo %>
+    </div><br>
+
+    <div class="labledata">
+      <strong>Country:</strong>
+      <%= f.select :country, options_for_select(COUNTRIES), :required => :true %>
+    </div><br>
+
+    <div class="labledata">
+      <%= f.label :website %><br />
+      <%= f.text_field :website, :required => :true, :size => 30  %>
+    </div><br>
+
+    <div class="labledata">
+      <%= f.label :bio %><br />
+      <%= f.text_area :bio, :size => "29x1",:maxlength => 50 %>
+    </div><br>
+
+    <div class="labledata">
+      <%= f.label :mobile_number %><br />
+      <%= f.text_field :mobile_number, :required => :true, :number => :true,:maxlength => 12,  :minlength => 10, :size => 30 %>
+    </div><br>
+
+    <div class="labledata">
+      <strong>Carrier:</strong>
+      <%= f.select :carrier, options_for_select(CARRIERS), :required => :true %>
+    </div><br>
+
+    <div class="labledata">
+      <%= f.label :profile_name %><br />
+      <%= f.text_field :profile_name, :required => :true, :size => 30  %>
+    </div><br>
+
+    <div>
+      <%= f.submit %>
+    </div>
+
+  </div>
+  <% end %>

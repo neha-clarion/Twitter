@@ -1,0 +1,24 @@
+<%= form_for(@post, :class => "navbar-form navbar-left", :html => { :id => "form"}) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+  
+  <div class="form-group">
+    <%= f.label :blog %><br />
+    <%= f.text_area :blog, placeholder: "Compose new post...",:size => "30x5",:required => true, :maxlength => 140, :minlength => 2 %>
+  </div>
+  
+  <div class="navbar-text">
+    <%= f.submit %>
+  </div>
+<% end %> 

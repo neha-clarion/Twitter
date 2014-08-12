@@ -1,0 +1,13 @@
+<div class="profiledata2">
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</div>
+
+<div class="profiledata2">
+  <strong>Location:</strong>
+  <%= @profile.location %>
+</div>
+
+<div>
+  <%= image_tag @profile.photo.url(:small) %>
+</div><br>

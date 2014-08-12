@@ -1,0 +1,51 @@
+<div class = "editdata">Tweets</div><br />
+<div class = "post">
+  <% @posts.each do |post| %>
+    <div class="tweet">
+
+      <div class ="profilepicture1">
+        <div class="imagedata">
+          <%= link_to post.user.profile.photo.present? ? image_tag(post.user.profile.photo, size: "30x23", alt: "reply") : image_tag("small/missing.jpeg", size: "30x23", alt: "reply") %>
+        </div>
+      </div>
+
+      <div class ="postcontent">
+        <%= link_to post.user.profile.name.present? ? post.user.profile.name : post.user.email, profile_path(post.user.id) %>:
+        <%= post.blog %>
+      </div>
+
+      <div class ="postaction">
+        <%= link_to image_tag("reply.jpeg", size: "15x15", alt: "reply") ,post_path(post), title:"Reply" %>
+        <% if post.user.id == current_user.id %>
+          <%= link_to image_tag("edit.jpeg", size: "15x15", alt: "reply"), edit_post_path(post), title:"Edit" %>
+          <%= link_to image_tag("delete.jpeg", size: "15x15", alt: "reply"), post, method: :delete, data: { confirm: 'Are you sure?' }, title:"Delete" %>
+        <% end %>
+      </div>
+    </div>
+    <div class = "extra"></div>
+  <div class = "commentdata">
+    <% post.comments.take(3).each do |comment| %>
+        <div class = "commentphoto">
+          <div class="imagedata">
+            <%= link_to comment.user.profile.photo.present? ? image_tag(comment.user.profile.photo, size: "30x23", alt: "reply") : image_tag("small/missing.jpeg", size: "30x23", alt: "reply") %>
+          </div>
+        </div>
+
+        <div class = "commentname">
+          <strong><%= link_to comment.user.profile.name.present? ? comment.user.profile.name : comment.user.email, profile_path(comment.user.id) %>:</strong>
+            <%= comment.content %>
+        </div>   
+
+        <div class = "commentaction">
+        </div> 
+    <% end %>
+        <div class = "commentname1">
+          <% if post.comments.size > 3 %>
+            <%= link_to 'View All' ,post_path(post) %>
+          <% end %> 
+          <br>  
+        </div>  
+  </div>
+<% end %>  
+</div>
+

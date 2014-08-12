@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="maindata">
+    <div class="profile">
+      <%= image_tag("follow.jpeg", size: "290x350", alt: "follow") %>
+    </div>
+    <div class = "post">
+      <div class = "editdata">Twitter Users</div><br>
+        <div class = "userlist">
+        <div>
+        <table>
+          <% @profile.each do |user| %>
+            <tr>
+              <td>
+                <div class="imagedata">
+                  <%= link_to user.photo.present? ? image_tag(user.photo, size: "50x50", alt: "reply") : image_tag("small/missing.jpeg", size: "50x50", alt: "reply") %>
+                </div></td>
+                <td><div class="userdata1"><%= user.name.present? ? user.name : user.email %></div></td>
+                <td></td>
+                <td><div class="userdata1"><%= link_to "View Profile", profile_path(user.id) %></div></td>
+            </tr>
+          <% end %>
+        </table>
+        <%= will_paginate @profile %>
+      </div>  
+    </div>  
+  </div>    
+</div>  

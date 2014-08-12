@@ -1,0 +1,24 @@
+<div>
+  <%= form_for [@commentable, @comment] do |f| %>
+    <% if @comment.errors.any? %>
+      <div class="error_messages">
+        <h2>Please correct the following errors.</h2>
+        <ul>
+        <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div>
+      <%= f.label :Comments %><br>
+      <%= f.text_area :content, rows: 2, cols:60 %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :commentable_type, :value => @commentable.class %>
+      <%= f.hidden_field :commentable_id, :value => @commentable.id %>
+    </div>
+    <div>
+      <%= f.submit(:url => home_detail_path)%>
+    </div>
+  <% end %> 
+</div>
